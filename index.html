@@ -1,90 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
   <title>Student Registration Form</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: sans-serif;
-      background-color: #0d1b2a; /* Dark blue */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    .form-container {
-      background-color: #ffffff;
-      padding: 30px 25px;
-      border-radius: 10px;
-      width: 100%;
-      max-width: 400px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    }
-
-    h2 {
-      text-align: center;
-      color: #0d1b2a;
-      margin-bottom: 25px;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 6px;
-      font-weight: 600;
-      color: #333;
-    }
-
-    input {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 15px;
-    }
-
-    input:focus {
-      border-color: #007bff;
-      outline: none;
-    }
-
-    button {
-      width: 100%;
-      padding: 12px;
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #0056b3;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <style>
+    /* Full-page background */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("download.jfif"); 
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
 
-  <div class="form-container">
-    <h2>Student Registration</h2>
-    <form>
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" placeholder="Your full name" required>
+form {
+    background-color: #fdf5dc; 
+    border: 8px solid burlywood;
+    padding: 25px 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="Your email address" required>
+h2 {
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
 
-      <label for="age">Age</label>
-      <input type="number" id="age" name="age" placeholder="Your age" min="1" max="150" required>
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
 
-      <button type="submit">Register</button>
-    </form>
-  </div>
+.gender-group,
+.skills-group {
+    margin-bottom: 12px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+  </style>
+
+  <form>
+    <h2>Registration Form</h2>
+
+    <label>Name:</label>
+    <input type="text" name="name" placeholder="Enter your name" required>
+
+    <label>Age:</label>
+    <input type="number" name="age" placeholder="Enter your age" required>
+
+    <label>Email:</label>
+    <input type="email" name="email" placeholder="Enter your email" required>
+
+    <label>DOB:</label>
+    <input type="date" name="dob" required>
+
+    <div class="gender-group">
+      <label>Gender:</label><br>
+      <input type="radio" name="gender" value="male"> Male
+      <input type="radio" name="gender" value="female"> Female
+    </div>
+
+    <div class="skills-group">
+      <label>Skills:</label><br>
+      <input type="checkbox" name="skills" value="c"> C
+      <input type="checkbox" name="skills" value="c++"> C++
+      <input type="checkbox" name="skills" value="java"> Java
+      <input type="checkbox" name="skills" value="python"> Python
+      <input type="checkbox" name="skills" value="kotlin"> Kotlin
+    </div>
+
+    <label>Qualification:</label><br>
+    <select>
+      <option>Select any one</option>
+      <option>High School</option>
+      <option>Diploma</option>
+      <option>Graduate</option>
+      <option>Post-Graduate</option>
+    </select>
+
+    <br><br>
+    <button type="submit">Register</button>
+  </form>
 
 </body>
 </html>
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+    <p>$0</p>
+    <button type="submit">Deposit</button><br><br>
+    <button type="submit">Withdraw</button><br><br>
+  </div>
+</body>
+</html>-->
